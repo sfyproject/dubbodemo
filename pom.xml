@@ -12,6 +12,7 @@
         <module>MyController</module>
         <module>MyService</module>
         <module>MyServiceImpl</module>
+        <module>MyServiceImpl</module>
     </modules>
 
 

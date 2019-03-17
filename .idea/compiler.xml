@@ -9,7 +9,12 @@
         <module name="MyController" />
         <module name="MyService" />
         <module name="MyServiceImpl" />
+        <module name="ServiceImpl" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="MyServiceImpl2" target="1.5" />
+      <module name="ServiceImpl" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
