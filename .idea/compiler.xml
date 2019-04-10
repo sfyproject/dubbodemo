@@ -6,10 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="MyController" />
-        <module name="MyService" />
         <module name="MyServiceImpl" />
+        <module name="MyService" />
         <module name="ServiceImpl" />
+        <module name="MyController" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

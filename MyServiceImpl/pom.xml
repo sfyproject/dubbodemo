@@ -77,7 +77,7 @@
                 <!-- 配置tomcat -->
                 <plugin>
                     <groupId>org.apache.tomcat.maven</groupId>
-                    <artifactId>tomcaat7-maven-plugin</artifactId>
+                    <artifactId>tomcat7-maven-plugin</artifactId>
                     <version>2.2</version>
                     <!-- 配置tomcat 端口-->
                     <configuration>
