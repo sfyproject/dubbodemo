@@ -14,6 +14,7 @@ public class TestController {
 
     // 引入service项目中的service
     // Resource 和 autoWired 作用相同
+    // 这个对象不应该由spring容器来创建，因为在服务启动的时候Spring就会创建，但是可能这是还没有创建，可能会创建失败
     @Resource
     private TestService testService;
 
