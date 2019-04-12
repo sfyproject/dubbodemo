@@ -15,12 +15,11 @@
 
     <!--    查找远程服务
     告诉需要什么类型的服务-->
-<!--    配置我是谁-->
+    <!--    配置我是谁-->
     <dubbo:application name="xiaofeizhe"/>
-<!--    配置注册中心-->
+    <!--    配置注册中心-->
     <dubbo:registry address="192.168.1.187:2181" protocol="zookeeper"/>
-<!--    告诉他我要什么,id不写可能会出问题-->
+    <!--    告诉他我要什么,id不写可能会出问题-->
     <dubbo:reference interface="com.sunfy.dubbodemo.TestService" id="testService"/>
-<!--    -->
 
 </beans>
