@@ -15,6 +15,7 @@
     <bytecodeTargetLevel>
       <module name="MyServiceImpl2" target="1.5" />
       <module name="ServiceImpl" target="1.5" />
+      <module name="testmaven" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

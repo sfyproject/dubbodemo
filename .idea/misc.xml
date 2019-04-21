@@ -5,6 +5,7 @@
     <file type="web" url="file://$PROJECT_DIR$/MyController" />
     <file type="web" url="file://$PROJECT_DIR$/MyServiceImpl" />
     <file type="web" url="file://$PROJECT_DIR$/ServiceImpl" />
+    <file type="web" url="file://$PROJECT_DIR$/testmaven" />
   </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
@@ -14,6 +15,11 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/testmaven/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectResources">
