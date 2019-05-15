@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 配置包扫描注解 -->
+    <context:component-scan base-package="com.sunfy"/>
+
+    <!-- dubbo可以和spring 无缝整合 -->
+    <!-- 目的：找到注册中心，告诉它我是谁，我的端口是多少 -->
+    <!-- 首先需要引入dubbo的约束 -->
+    <!-- 1. 配置别名，目的在后台服务可以看到这个服务，在后台容易区分，名称可以随意，最后见其名，知其意 -->
+    <dubbo:application name="test1"/>
+
+    <!-- 2. 配置注册中心 -->
+    <!-- address 指的是注册中心的地址
+         peotocol 指的是注册中心的协议格式-->
+    <dubbo:registry address="192.168.1.187:2181" protocol="zookeeper"/>
+    <!--
+        告诉注册中心我是谁
+        interface 代表的是类型
+        ref代表的是具体发布哪个服务 前面写的是接口，后面写的是具体的实现类，【同一个接口可能多个实现类】
+        timeout 超时时间
+    -->
+    <dubbo:service interface="com.sunfy.dubbodemo.TestService" ref="testServiceImpl" timeout="60000"/>
+
+    <!-- 配置端口，消费者要连接的时候，必须通过ip：端口的形式连接，ip在连接注册中心的时候就已经知道了我们的ip
+     但是端口是不知道的
+     端口可以随意但是不可重复【一个端口可以同时发布多个服务】
+     -->
+    <dubbo:protocol name="dubbo" port="12345"/>
+
+</beans>
